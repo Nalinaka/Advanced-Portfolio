@@ -233,12 +233,29 @@ PROJECTS
     overflow: hidden;
 }
 
+.project__wrapper:hover .project__description {
+    opacity: 0.7;
+    transform: translateY(-50%);
+}
 
-.position__description {
+.project__wrapper:hover .project__img {
+    transform: scale(1.07); 
+    filter: blur(5px);
+}
+
+.project__wrapper:hover .project__wrapper--bg {
+    opacity: 0.7; 
+    visibility: visible;
+}
+
+
+.project__description {
     position: absolute; 
     top: 50%;
     left: 90px; 
-    transform: translateY(-50%);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: opacity 300ms, transform 450ms ease; 
     color: rgb(69, 114, 228);
     max-width: 550px; 
 }
@@ -250,5 +267,25 @@ PROJECTS
     height: 100%; 
     width: 100%; 
     background-color: #1c1d25; 
-    opacity: 0.7;
+    opacity: 0;
+    transition: all 450ms ease; 
+    visibility: hidden;
+}
+
+.project__description--title {
+    font-size: 40px;
+}
+
+.project__description--sub-title {
+    margin-top: 8px; 
+}
+
+.project__description--link {
+    color: white; 
+    font-size: 20px; 
+    margin-right: 16px; 
+}
+
+.project__description--para {
+    margin: 16px 0;
 }
