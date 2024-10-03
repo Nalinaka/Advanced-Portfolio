@@ -402,6 +402,7 @@ COME BACK TO THIS ONCE YOU CAN SEE THE CODE CORRECTLY */
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1; 
 }
 
 .modal__overlay--loading {
@@ -417,6 +418,7 @@ COME BACK TO THIS ONCE YOU CAN SEE THE CODE CORRECTLY */
     font-weight: 700;
     text-align: center;
     padding: 28px; 
+    z-index: -1; 
 }
 
 /* HOW YOU CREATE THE SPINNER FOR WHEN FORM IS SUBMITTED */
