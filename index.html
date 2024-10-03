@@ -94,6 +94,99 @@
       <a href="projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I’m a passionate
+            <span class="text-blue">Frontend Software Engineer</span>
+            specializing in creating dynamic, user-friendly websites that
+            deliver exceptional <span class="text-blue">user experiences.</span>
+            <br />
+            Currently, I’m working on a variety of
+            <span class="text-blue">independent projects</span>, utilizing a
+            diverse range of programming languages to bring
+            <span class="text-blue">innovative</span> ideas to life.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/CSS.png"
+                alt="CSS"
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/html5-logo-2.png"
+                alt="HTML"
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/JavaScript.png"
+                alt="JS"
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/React.jpg"
+                alt="React"
+              />
+              <span class="language__name">React</span>
+            </figure>
+          </div>
+
+          <div class="modal__half modal__contact">
+            <h3 class="modal__title modal__title--contact">
+              Let's have a chat!
+            </h3>
+            <h4 class="modal__sub-title modal__sub-title--contact">
+              I'm open to new opportunities!
+            </h4>
+            <form id="contact__form" action="">
+              <div class="form__item">
+                <label class="form__item--label"> Name</label>
+                <input class="input" name= "user_name" type="text" required>
+            </input>
+              </div>
+              <div class="form__item">
+                <label class="form__item--label">Email</label>
+                <input class="input" name= "user_email" type="email" required>
+              </input>
+              </div>
+              <div class="form__item">
+                <label class="form__item--label">Message</label>
+                <textarea class="input" name= "message" type="text" required></textarea>
+              </div>
+              <button id= "contact__submit" class="form__submit">
+                Launch the Message Rocket!
+              </button>
+            </form>
+            <div class="modal__overlay modal__overlay--loading">
+              <i class="fas fa-spinner"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--success">
+              Thanks for your message, I say. Soon, a message 
+              you shall have!
+          </div>
+        </div>
+          <i class="fas fa times modal__exit click"></i>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
@@ -238,8 +331,7 @@
               </div>
               <div class="project__wrapper--bg">
                 <div class="project__description">
-                  <h3 class="project__description--title">
-                    Upcoming Project</h3>
+                  <h3 class="project__description--title">Upcoming Project</h3>
                   <h4 class="project__description--sub-title">
                     HTML, CSS, JavaScript
                   </h4>
@@ -264,26 +356,37 @@
 
     <footer>
       <div class="container">
+        <div class="row footer__row"></div>
         <figure>
-          <img src="./assets/logo.svg" />
+          <img class="footer__logo--img" src="./assets/nalinilogo.png" />
         </figure>
         <div class="footer__social--list">
-          <a href="#" class="footer__social--link link__hover-effect  link__hover-effect-white">
-            Github
+          <a
+            href="#"
+            class="footer__social--link link__hover-effect link__hover-effect-white"
+          >
+            GitHub
           </a>
-          <a href="#" class="footer__social--link link__hover-effect  link__hover-effect-white">
+          <a
+            href="#"
+            class="footer__social--link link__hover-effect link__hover-effect-white"
+          >
             LinkedIn
           </a>
-          <a href="#" class="footer__social--link link__hover-effect  link__hover-effect-white">
+          <a
+            href="#"
+            class="footer__social--link link__hover-effect link__hover-effect-white"
+          >
             Contact
           </a>
-          <a href="#" class="footer__social--link link__hover-effect  link__hover-effect-white">
+          <a
+            href="#"
+            class="footer__social--link link__hover-effect link__hover-effect-white"
+          >
             Resume
           </a>
         </div>
-        <div class="footer__copyright">
-          Copyright © 2024 Nalini Krishan
-        </div>
+        <div class="footer__copyright">Copyright © 2024 Nalini Krishan</div>
       </div>
     </footer>
   </body>
