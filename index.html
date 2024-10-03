@@ -15,15 +15,16 @@
 </script>
 <script type="text/javascript">
    (function(){
-      emailjs.init({
-        publicKey: "o2MKta5yqq3mx3fcW",
-      });
-   })();
+      emailjs.init("o2MKta5yqq3mx3fcW");
+      })();
 </script>
   </head>
 
+<!-- the onmousemove code actually moves the shapes - this is how you add it in html -->
+ <!-- Create matching function in JS -->
+
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
           <img id="Nalini-logo" src="./assets/nalinilogo.png" alt="logo" />
@@ -45,7 +46,7 @@
             >
           </li>
 
-          <li class="nav__link">
+          <li class="nav__link" onclick= "toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -53,7 +54,7 @@
             >
           </li>
 
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -74,7 +75,7 @@
             with a strong aptitude for building websites, enhancing the user
             experience.
             <br />
-            Here is a bit more <span class="text-blue">about me.</span>
+            Here is a bit more <span class="text-blue" onclick="toggleModal()">about me.</span>
           </p>
           <div class="social__list">
             <a
@@ -100,7 +101,7 @@
         </div>
       </header>
 
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal">
         <i class="fa-regular fa-envelope"></i>
       </button>
       <a href="projects" class="scroll">
@@ -109,7 +110,7 @@
       <div class="modal">
         <div class="modal__half modal__about">
           <h3 class="modal__title modal__title--about">
-            Here's a bit about me.
+            Here's a bit <b class="blue" about me. onclick="toggleModal()"></b>
           </h3>
           <h4 class="modal__sub-title modal__sub-title--about">
             Frontend Software Engineer
@@ -163,6 +164,7 @@
           </div>
 
           <div class="modal__half modal__contact">
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
             <h3 class="modal__title modal__title--contact">
               Let's have a chat!
             </h3>
@@ -196,9 +198,17 @@
               you shall have!
           </div>
         </div>
-          <i class="fas fa times modal__exit click"></i>
         </div>
       </div>
+      <img src="./assets/semi circle.svg" class= "shape shape--0">
+      <img src="./assets/circle.svg" class= "shape shape--1">
+      <img src="./assets/squiggly.svg" class= "shape shape--2">
+      <img src="./assets/circle.svg" class= "shape shape--3">
+      <img src="./assets/triangle.svg" class= "shape shape--4">
+      <img src="./assets/circle.svg" class= "shape shape--5">
+      <img src="./assets/squiggly.svg" class= "shape shape--6">
+      <img src="./assets/circle.svg" class= "shape shape--7">
+      <img src="./assets/semi circle.svg" class= "shape shape--8">
     </section>
 
     <section id="projects">
