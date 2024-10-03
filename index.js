@@ -1,5 +1,29 @@
 let isModalOpen = false; 
 let contrastToggle = false; 
+const scaleFactor = 1/20; 
+
+// THIS CODE MAKES THE BACKGROUND SHAPES MOVE AROUND
+// THE SHAPES STYLE TRANSFORM TRANSLATE WILL CHUCK THE 
+// IMAGE OFF AND ON THE SCREEN (the scale factor of 20 is 
+// showing that it only moves 20% total so not going off 
+// screen) - this is scaling the icons!
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape");
+    const x = event.clientX * scaleFactor;
+    const y = event.clientY * scaleFactor;
+
+    // the const isodd - makes the shapes go in different 
+    // directions - so the odd shaped numbers will be moving
+    // opposite the even in the below const isOdd code and 
+    // boolInt code, boolean true or false, ternary operator 
+    // function too.
+    for (let i=0; i < shapes.length; i++) {
+        const isOdd = i % 2 === 0;
+        const boolInt = isOdd? -1 : 1;
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+    }
+
+}
 
 // THIS CODE ALLOWS YOU TO TOGGLE DARK AND LIGHT ON THE SITE WHEN CLICKING THAT CIRCLE ICON ON RIGHT
 function toggleContrast() {
