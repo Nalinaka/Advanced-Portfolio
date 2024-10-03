@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nalini Krishan Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/e995974119.js"
       crossorigin="anonymous"
     ></script>
-    <title>Nalini Krishan Portfolio</title>
+    <script src="index.js"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -168,7 +169,7 @@
             <h4 class="modal__sub-title modal__sub-title--contact">
               I'm open to new opportunities!
             </h4>
-            <form id="contact__form" action="">
+            <form id="contact__form" onsubmit="contact(event)">
               <div class="form__item">
                 <label class="form__item--label"> Name</label>
                 <input class="input" name= "user_name" type="text" required>

@@ -61,6 +61,10 @@ input:focus, textarea:focus {
     background-color: rgb(69, 114, 228);
 }
 
+.modal--open {
+    z-index: 60; 
+}
+
 .container {
   padding: 50px 0px;
   width: 100%;
@@ -408,7 +412,7 @@ COME BACK TO THIS ONCE YOU CAN SEE THE CODE CORRECTLY */
 .modal__overlay--loading {
     background-color: rgb(69, 114, 228);
     font-size: 80px; 
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .modal__overlay--success {
@@ -418,7 +422,12 @@ COME BACK TO THIS ONCE YOU CAN SEE THE CODE CORRECTLY */
     font-weight: 700;
     text-align: center;
     padding: 28px; 
-    z-index: -1; 
+    /* z-index: -1;  */
+}
+
+
+.modal__overlay--visible {
+    z-index: 1; 
 }
 
 /* HOW YOU CREATE THE SPINNER FOR WHEN FORM IS SUBMITTED */
