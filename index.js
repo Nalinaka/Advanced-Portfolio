@@ -20,7 +20,8 @@ function moveBackground(event) {
     for (let i=0; i < shapes.length; i++) {
         const isOdd = i % 2 === 0;
         const boolInt = isOdd? -1 : 1;
-        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+        // ROTATION
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 10}deg)` 
     }
 
 }
@@ -66,9 +67,9 @@ function contact(event) {
 
 // THIS CODE ALLOWS THE TOGGLE TO OPEN AND CLOSE FOR CONTACT FORM
 function toggleModal() {
-    if (ismodalOpen) {
+    if (isModalOpen) {
     isModalOpen = false; 
-    return document.body.classList.remove("modal--open")
+    return document.body.classList.remove("modal--open");
     }
   isModalOpen = true;
   document.body.classList += " modal--open";
