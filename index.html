@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nalini Krishan Portfolio</title>
     <link rel="stylesheet" href="style.css" />
@@ -14,7 +15,7 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script type="text/javascript">
-   (function(){
+   (function (){
       emailjs.init("o2MKta5yqq3mx3fcW");
       })();
 </script>
@@ -30,7 +31,7 @@
           <img id="Nalini-logo" src="./assets/nalinilogo.png" alt="logo" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick= "toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -40,7 +41,7 @@
 
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
@@ -164,41 +165,39 @@
               <span class="language__name">React</span>
             </figure>
           </div>
-
-          <div class="modal__half modal__contact">
-            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
-            <h3 class="modal__title modal__title--contact">
-              Let's have a chat!
-            </h3>
-            <h4 class="modal__sub-title modal__sub-title--contact">
-              I'm open to new opportunities!
-            </h4>
-            <form id="contact__form" onsubmit="contact(event)">
-              <div class="form__item">
-                <label class="form__item--label"> Name</label>
-                <input class="input" name= "user_name" type="text" required>
-            </input>
-              </div>
-              <div class="form__item">
-                <label class="form__item--label">Email</label>
-                <input class="input" name= "user_email" type="email" required>
-              </input>
-              </div>
-              <div class="form__item">
-                <label class="form__item--label">Message</label>
-                <textarea class="input" name= "message" type="text" required></textarea>
-              </div>
-              <button id= "contact__submit" class="form__submit">
-                Launch the Message Rocket!
-              </button>
-            </form>
-            <div class="modal__overlay modal__overlay--loading">
-              <i class="fas fa-spinner"></i>
+        </div>
+        
+        <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!
+          </h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I'm open to new opportunities!
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label"> Name</label>
+              <input class="input" name= "user_name" type="text" required>
             </div>
-            <div class="modal__overlay modal__overlay--success">
-              Thanks for your message, I say. Soon, a message 
-              you shall have!
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+            <input class="input" name= "user_email" type="email" required>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name= "message" type="text" required></textarea>
+            </div>
+            <button id= "contact__submit" class="form__submit">
+              Launch the Message Rocket!
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
           </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for your message, I say. Soon, a message 
+            you shall have!
         </div>
         </div>
       </div>
@@ -382,8 +381,16 @@
       <div class="container">
         <div class="row footer__row"></div>
         <figure>
-          <img class="footer__logo--img" src="./assets/nalinilogo.png" />
+          <a href="#" class="footer__anchor">
+            <figure class="footer__logo">
+            <img class="footer__logo--img" src="./assets/nalinilogo.png" />
         </figure>
+            <span class="footer__logo--popper">
+              Top
+              <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </span>
+          </a>
+       
         <div class="footer__social--list">
           <a
             href="https://github.com/Nalinaka" target="_blank"
@@ -411,6 +418,7 @@
           </a>
         </div>
         <div class="footer__copyright">Copyright © 2024 Nalini Krishan</div>
+      </figure>
       </div>
     </footer>
   </body>

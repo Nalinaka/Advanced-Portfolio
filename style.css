@@ -476,6 +476,11 @@ NOW MODAL SLIDES IN FROM THE RIGHT - CONTACT SIDE IS ON RIGHT */
   margin-bottom: 20px;
 }
 
+.form__submit-h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
 .form__submit {
   background-color: rgb(69, 114, 228);
   border: 2px solid rgb(69, 114, 228);
