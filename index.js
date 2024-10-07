@@ -49,7 +49,7 @@ function contact(event) {
       "service_nmjm2wt",
       "template_nypeksg",
       event.target,
-      "o2MKta5yqq3mx3fc"
+      "gCwI_XisOix3B45N1"
     )
     .then((res) => { 
       console.log(res)
