@@ -49,13 +49,15 @@ function contact(event) {
       "service_nmjm2wt",
       "template_nypeksg",
       event.target,
-      "user_o2MKta5yqq3mx3fc"
+      "o2MKta5yqq3mx3fc"
     )
-    .then(() => {
+    .then((res) => { 
+      console.log(res)
       loading.classList.remove("modal__overlay--visible");
       success.classList += " modal__overlay--visible";
     })
-    .catch(() => {
+    .catch((e) => {
+      console.log({ e });
       loading.classList.remove("modal__overlay--visible");
       alert(
         "The email service is temporarily unavailable, fix this I will. Please contact me directly on nalinionair@gmail.com"
