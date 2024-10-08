@@ -635,7 +635,9 @@ PROJECTS
 .project__description--link {
   color: white;
   font-size: 20px;
-  margin-right: 16px;
+  /* margin-right: 16px; */
+  display: inline-block; 
+  margin-top: 16px;
 }
 
 .project__description--para {
